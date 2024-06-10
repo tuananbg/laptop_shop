@@ -40,5 +40,6 @@ Phạm vi của dự án
   - Thêm sản phẩm vào giỏ hàng.
   - Thanh toán.
   - Liên hệ.
+  - Xem thông tin sản phẩm.
   
 
