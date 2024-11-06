@@ -1,11 +1,11 @@
-FROM openjdk:8:u151-jdk-alpine3.7
+FROM openjdk:11-jre-slim
 
 EXPOSE 8070
 
-ENV APP_HOME /usr/src/app
+VOLUME /tmp
 
-COPY target/laptop_shop-0.0.1-SNAPSHOT.jar $APP_HOME/app.jar
+ARG JAR_FILE=target/*.war
 
-WORKDIR $APP_HOME
+COPY ${JAR_FILE} app.war
 
-ENTRYPOINT exec java -jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.war"]
